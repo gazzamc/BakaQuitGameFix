@@ -78,7 +78,7 @@ private:
 	public:
 		static void Install()
 		{
-			static REL::Relocation<std::uintptr_t> target{ REL::Offset(0x023FC258), 0x77 };
+			static REL::Relocation<std::uintptr_t> target{ REL::Offset(0x023FC258), 0x4C };
 			auto& trampoline = SFSE::GetTrampoline();
 			trampoline.write_call<5>(target.address(), Shutdown);
 		}

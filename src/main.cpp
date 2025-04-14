@@ -37,7 +37,7 @@ namespace Hooks
 
 		static void Install()
 		{
-			static REL::Relocation target{ REL::ID(149084), 0xAB };
+			static REL::Relocation target{ REL::ID(149084), 0x80 };
 			target.write_call<5>(Shutdown);
 		}
 	}

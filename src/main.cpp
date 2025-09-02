@@ -42,7 +42,7 @@ namespace Hooks
 			REX::W32::TerminateProcess(REX::W32::GetCurrentProcess(), EXIT_SUCCESS);
 		}
 
-		inline static REL::Hook Hook{ REL::ID(99375), 0xA9, Shutdown };
+		inline static REL::Hook Hook{ REL::ID(99375), 0xDF, Shutdown };
 	};
 
 	static void Install()
@@ -72,3 +72,4 @@ SFSEPluginLoad(const SFSE::LoadInterface* a_sfse)
 	SFSE::GetMessagingInterface()->RegisterListener(MessageCallback);
 	return true;
 }
+
